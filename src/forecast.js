@@ -11,7 +11,8 @@ const forecast = (lat,long,callback) => {
             console.log('Something went wrong with the query. Try another search!')
         }
         else{
-            callback(undefined, 'The current temperature is '+body.current.temperature+'. There is a '+body.current.precip+ '% chance of rain at ' +body.location.name)
+            callback(undefined, 'The current temperature is '+body.current.temperature+'. There is a '+body.current.precip+ '% chance of rain at ' +body.location.name+
+            '\nThe humidity is '+ body.current.humidity +'\n. The current wind speed is ' + body.current.wind_speed+'.')
 
 
             }
