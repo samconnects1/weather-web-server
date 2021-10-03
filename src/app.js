@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const app = express()
 const geoCode =require('./geocode')
 const forecast =require('./forecast')
+const port = process.env.PORT || 3001
 
 //Absolute paths - Public and views folder
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -102,6 +103,6 @@ app.get('*',(req,res)=>{
 //     res.send('<h1>About</h1')
 // })
 
-app.listen(3001,() =>{
+app.listen(port,() =>{
     console.log('Server running on port 3001')
 })
